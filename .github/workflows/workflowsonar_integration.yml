@@ -17,7 +17,7 @@ jobs:
     - name: Build with Maven
       run: mvn test
     - name: scan code sonar
-      run: mvn -B verify sonar:sonar -Dsonar.projectKey=Sivaneni_SonarQubeCoverageJava -Dsonar.organization=sonarcloud-test1010 -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONAR_TOKEN
+      run: mvn -B verify sonar:sonar -Dsonar.projectKey=Sivaneni_SonarQubeCoverageJava -Dsonar.organization=sonarcloud-test1010 -Dsonar.host.url=https://sonarcloud.io -Dsonar.token="29224e836836d7603f95313e202107a44cc36dfb"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_token: ${{ secrets.SONAR_TOKEN }}
