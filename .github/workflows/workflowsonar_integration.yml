@@ -22,8 +22,9 @@ jobs:
        -Dsonar.projectKey=sonarcloud-test1010
        -Dsonar.Organization=sonarcloud-test
        -Dsonar.host.url=https://sonarcloud.io
-       -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+       -Dsonar.token=$sonar_token
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        sonar_token: ${{ secrets.SONAR_TOKEN }}
     - name: build code
       run: mvn package
